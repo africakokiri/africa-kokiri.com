@@ -1,8 +1,7 @@
-import { Roboto_Mono } from "next/font/google";
+import { robotoMono } from "@/styles/fonts";
+
 import Image from "next/image";
 import { type ReactNode } from "react";
-
-const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export const MobileNotAvailableWrapper = ({
   children
