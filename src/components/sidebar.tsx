@@ -15,7 +15,7 @@ border-black/15 dark:border-neutral-600"
 export const Sidebar = () => {
   return (
     <div
-      className="fixed left-0 top-0 min-h-full bg-neutral-200 p-4
+      className="fixed left-0 top-0 z-50 min-h-full bg-neutral-200 p-4
 dark:bg-neutral-800"
     >
       <div className="flex flex-col items-center justify-center gap-2">

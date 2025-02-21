@@ -5,5 +5,12 @@ export const PlForSidebar = ({
 }: {
   readonly children: ReactNode;
 }) => {
-  return <div className="relative pl-32">{children}</div>;
+  return (
+    <div
+      className="relative flex h-full w-full justify-center
+justify-items-center p-8"
+    >
+      {children}
+    </div>
+  );
 };
