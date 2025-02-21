@@ -19,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="h-screen w-screen antialiased">
+      <body
+        className="h-screen w-screen antialiased dark:bg-[#171717]
+dark:text-white"
+      >
         <NextThemesProvider>
           <Sidebar />
           <MobileNotAvailableWrapper>{children}</MobileNotAvailableWrapper>
