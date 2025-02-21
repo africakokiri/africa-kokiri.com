@@ -1,3 +1,4 @@
+import { DarkmodeSwitch } from "@/components/darkmode-switch";
 import { robotoMono } from "@/styles/fonts";
 
 const HorizontalLine = () => {
@@ -12,8 +13,12 @@ border-black/15"
 export const Sidebar = () => {
   return (
     <div className="fixed left-0 top-0 min-h-full bg-neutral-200 p-4">
-      <p className={`${robotoMono.className} text-lg`}>Africa Kokiri</p>
+      <div className="flex flex-col items-center justify-center gap-2">
+        <p className={`${robotoMono.className} text-lg`}>Africa Kokiri</p>
+        <DarkmodeSwitch />
+      </div>
       <HorizontalLine />
+      <ul></ul>
     </div>
   );
 };
