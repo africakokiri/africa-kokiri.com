@@ -1,4 +1,5 @@
 import { MobileNotAvailableWrapper } from "@/components/mobile-not-available-wrapper";
+import { Sidebar } from "@/components/sidebar";
 import NextThemesProvider from "@/libs/next-themes/next-themes-provider";
 import "@/styles/globals.css";
 
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className="h-screen w-screen antialiased">
         <NextThemesProvider>
+          <Sidebar />
           <MobileNotAvailableWrapper>{children}</MobileNotAvailableWrapper>
         </NextThemesProvider>
       </body>
