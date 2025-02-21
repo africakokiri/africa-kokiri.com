@@ -1,6 +1,7 @@
 import { MobileNotAvailableWrapper } from "@/components/mobile-not-available-wrapper";
 import { Sidebar } from "@/components/sidebar";
 import NextThemesProvider from "@/libs/next-themes/next-themes-provider";
+import { robotoMono } from "@/styles/fonts";
 import "@/styles/globals.css";
 
 import type { Metadata } from "next";
@@ -20,8 +21,8 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className="h-screen w-screen antialiased dark:bg-[#171717]
-dark:text-white"
+        className={`${robotoMono.className} h-screen w-screen antialiased
+dark:bg-[#171717] dark:text-white`}
       >
         <NextThemesProvider>
           <Sidebar />

@@ -1,10 +1,12 @@
 import { DarkmodeSwitch } from "@/components/darkmode-switch";
-import { robotoMono } from "@/styles/fonts";
+import { CATEGORY } from "@/config/category";
+
+import Link from "next/link";
 
 const HorizontalLine = () => {
   return (
     <hr
-      className="my-4 flex w-full justify-center border-[0.5px]
+      className="my-6 flex w-full justify-center border-[0.5px]
 border-black/15 dark:border-neutral-600"
     />
   );
@@ -17,11 +19,32 @@ export const Sidebar = () => {
 dark:bg-neutral-800"
     >
       <div className="flex flex-col items-center justify-center gap-2">
-        <p className={`${robotoMono.className} text-lg`}>Africa Kokiri</p>
+        <Link
+          href="/"
+          className="text-xl"
+        >
+          Africa Kokiri
+        </Link>
         <DarkmodeSwitch />
       </div>
       <HorizontalLine />
-      <ul></ul>
+      <ul className="space-y-4 text-xl">
+        {CATEGORY.map(({ id, name }) => {
+          return (
+            <li
+              key={id}
+              className="w-full"
+            >
+              <Link
+                className="inline-block w-full"
+                href={name.toLowerCase()}
+              >
+                {name}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
