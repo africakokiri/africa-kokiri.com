@@ -9,7 +9,7 @@ export const DarkmodeSwitch = ({ className }: { className?: string }) => {
   return (
     <button
       onClick={() =>
-        theme === "dark" ? setTheme("light") : setTheme("light")
+        theme === "dark" ? setTheme("light") : setTheme("dark")
       }
       className={className}
     >
