@@ -7,10 +7,10 @@ export const PlForSidebar = ({
 }) => {
   return (
     <div
-      className="relative flex h-full w-full justify-center
-justify-items-center p-8"
+      className="relative -z-10 flex h-full w-full items-center
+justify-center p-8"
     >
-      {children}
+      <div className="min-w-[650px] bg-blue-200">{children}</div>
     </div>
   );
 };
